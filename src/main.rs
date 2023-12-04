@@ -1,5 +1,5 @@
 use clap::Parser;
-use aoc2023::day_01::{solve_part_1, solve_part_2};
+use aoc2023::day_02;
 
 /// Solve a daily puzzle from Advent of Code 2023.
 #[derive(Parser, Debug)]
@@ -10,5 +10,5 @@ struct Args {
 
 fn main() {
     let args = Args::parse();
-    println!("{}", solve_part_2(args.input_file.as_str()));
+    println!("{}", day_02::solve_part_1(args.input_file.as_str()));
 }
