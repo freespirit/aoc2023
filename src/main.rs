@@ -1,5 +1,4 @@
 use clap::Parser;
-
 use aoc2023::day_01::{solve_part_1, solve_part_2};
 
 /// Solve a daily puzzle from Advent of Code 2023.
