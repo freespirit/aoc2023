@@ -10,5 +10,5 @@ struct Args {
 
 fn main() {
     let args = Args::parse();
-    println!("{}", day_02::solve_part_1(args.input_file.as_str()));
+    println!("{}", day_02::solve_part_2(args.input_file.as_str()));
 }
