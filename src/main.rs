@@ -1,5 +1,6 @@
+use std::fs;
 use clap::Parser;
-use aoc2023::{day_03, day_04};
+use aoc2023::{day_03, day_04, day_05};
 
 /// Solve a daily puzzle from Advent of Code 2023.
 #[derive(Parser, Debug)]
@@ -10,5 +11,11 @@ struct Args {
 
 fn main() {
     let args = Args::parse();
-    println!("{}", day_04::solve_part_2(args.input_file.as_str()));
+    match fs::read_to_string(args.input_file.as_str()) {
+        Ok(schematic) => {
+            println!("Part 1: {}", day_05::solve_part_1(schematic.as_str()));
+            println!("Part 2: {}", day_05::solve_part_2(schematic.as_str()));
+        }
+        Err(_) => { println!("Error reading input file."); }
+    };
 }
